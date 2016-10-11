@@ -1,0 +1,465 @@
+#Start Here
+{
+
+~15,Geting Started:
+
+
+
+A few pointers before you start:
+
+~12,    1. Enable SmartDrive.
+           It will speed up the program in a big way.
+
+    2. Check the WEB site often for newer versions.
+       Multi-LIB is updated about once every 2-3 weeks
+
+
+~15,       URL: HTTP://www.rainbowtel.net/~pitman/multilib.html
+~15,       Email: kcoots@geocities.com
+
+        Please!, Please! submit any bugs to me so I can fix them.
+        Also email me with any suggestions, things you would
+        like to see added or things that need to be changed.
+
+
+    3. All Library updating is done in "REAL TIME"
+       (ie.) if you delete a module from a library
+       the operation is carried out at that time
+       you cannot undo or exit without saving.
+
+
+    4. If anyone is interested in writing a better
+       help file please do so! If you email me I will
+       send you the source code for parsing the help
+       file. I am planning on adding hyper links.
+       But for now this will have to do. If you would
+       like to help with creating a help file format and
+       parsing routine please email me. The format as of
+       now is pretty simple. And no this program was not
+       written in C. It is all QuickBASIC Ver 4.5, with
+       some Assembly routines.
+
+    
+
+
+
+
+}
+
+#ShortCut Keys
+  {
+
+
+~15,        ShortCut  Keys
+
+Most commands can also be carried out by selecting them from the
+pulldown menus.
+
+~15,Help                   F1
+~15,Set Version            F2
+~15,Search                 F3
+~15,View OutPut Screen     F4
+~15,Dos Shell              F8
+~15,EXIT                   F10
+
+~15,Make Quick Library     Ctrl+Q
+~15,Select All             Ctrl+BackSpace
+~15,Unselect All           Ctrl+Minus
+~15,Select One             Space
+~15,Cancel                 Esc
+~15,Cut Module             Shift+Del
+~15,Paste Module           Shift+Ins
+~15,Copy Module            Ctrl+C
+~15,Extract Module         Ctrl+X
+~15,Delete Module          Del
+~15,Add Module             Ctrl+A
+~15,Add Library            Ctrl+L
+~15,View Library #         Shift+#
+
+
+
+
+ }
+
+^1,2
+#File Commands
+   {
+
+~15,New Libraray:           ShortCut Key - NONE
+Builds a new library using the name specified. After naming the library
+you are prompted for modules and librarys to add to the new library,
+Select cancel if you do not wish to add modules at this time.
+
+~15,Open Libraray:          ShortCut Key - NONE
+Loads a library from disk for viewing and editing You can load up to 9
+librarys at a time. To load a library, chose File from the pulldown menu
+(Alt+F), chose Open Library, You are then presented with a dialog box were
+you can enter a file specification the default is *.LIB. after entering a
+file spec and chosing OK you are presented with a file list from which you
+can select files for loading. You cannot select files across directorys.
+
+~15,Make QLB:               ShortCut Key - Ctrl+Q
+Builds a Microsoft QuickBASIC compatible Quick Library from the current
+library. You must have a library loaded to use this command
+              
+~15,Close:                  ShortCut Key - NONE
+Closes current Library.
+
+~15,Close All:              ShortCut Key - NONE
+Closes all open Librarys.        
+
+~15,Dos Shell:              ShortCut Key - F8
+Shells to DOS.
+
+~15,Exit:                   ShortCut Key - F10
+Closes all open files, removes any modules in the clipboard from the disk.
+and exits to the Operating system.
+           }
+
+
+^2,5,6,7
+#Library Functions
+#Clipboard
+     {
+
+~15,Library Functions
+
+
+~15,Note:
+For all edit commands, if no Modules are selected via the space bar,
+The currently highlighted module is assumed.
+
+~15,Cut:                  Shortcut Key: Shift+Del
+Cuts a module (removes from library) from current library and saves in the
+clipboard until the next Cut or Copy operation.
+
+~15,Copy:                 Shortcut Key: Ctrl+C
+Copys a module from current library and saves in the clipboard until
+the next Cut or Copy operation.
+
+~15,Paste:                Shortcut Key: Shift+Ins
+Paste any modules saved in clipboard to current library.
+
+~15,Delete:               Shortcut Key: Del
+Removes module from library after confrimatiom.
+
+~12,CAUTION!  Once module is deleted there is no recovering it.
+~12,          unless you have the module somwhere on disk or if
+~12,          you extracted it prior to deleting it.
+
+
+
+~15,Extract:               Shortcut Key: Ctrl+X
+Extracts module from library to and saves to disk. You are prompted for
+a path in which to save the extracted module, the default path is the
+directory containing the .LIB file. You cannot specify a filename,
+if a filename is specified it is ignored.
+
+~15,NOTE: Do not extract modules to the Temp directory specified in
+~15,      Options-->Paths because Multi-Lib uses this directory
+~15,      to store modules that are Copied to the clipboard and
+~15,      they are removed from the disk when Multi-Lib exits or
+~15,      when a new Edit command is carried out.  (ie. Cut or Copy)
+
+
+~15,Clipboard:
+Used to hold modules that have been cut or copied. MultiLib
+stores the  modules in the TEMP directory specified in the MULTILIB.INI
+file. If no temp directory is specified then the current directory is
+used. These files are removed from the disk when you exit MultiLib.
+
+
+
+
+
+      }
+
+^3,1
+#Options
+        {
+
+
+~15,Set Version:           Shortcut Key: F2
+Allows you to set the version of QuickBasic you are building a
+QuickLibrary for.
+
+
+~15,Set Paths:           Shortcut Key: F2
+
+===============================================================
+
+~15,Executable Files       Default: Current Directory
+Sets the directory where LINK.EXE, LIB.EXE and BC.EXE are located.
+You can leave this blank if all the above files are in your path.
+
+~15,Support Library        Default: Current Directory
+Sets the directory where you support library is.
+~15,(BQLB40,BQLB45,QBXQLB)
+
+
+~15,Temporary Dir          Default: Current Directory
+Sets the directory to use for temparay files genarated by MultiLib
+
+~15,Startup Dir            Default: Current Directory
+Sets the directory you want MultiLib to Start in.
+
+~15, Tip.
+          Leaving the StartUp Dir blank will cause
+          Multi-LIB to startup in the Current Directory.
+          (ie) the directory you are in when you type MULTILIB
+===============================================================
+
+~15,Lib Options:           Shortcut Key: NONE
+Not yet implemented      (will allow you to set LIB command line
+                          options when implemented)
+
+
+~15,Debug                   Default: 0
+Display lib and link output when performing library functions.
+Availble options are:
+
+~15,0 - OFF  (Do not display output)
+~15,1 - ON   (display output)
+
+~15,Prompt On Delete        Default: 1
+Turns ON/OFF prompting before deleting a module or file.
+Use with caution.
+
+~15,0 - OFF  (Do not prompt before delete)
+~15,1 - ON   (prompt before delete)
+
+~15,Menu Delay              Default: 1
+Turns on or off the delay when you select an item from
+the pulldown menus.
+
+~15,0 - OFF  (No Delay)
+~15,1 - ON   (Delay)
+
+~15,Auto Update QLB               Default: 1
+Turns on or off automaticly updating the QuickLibrary each time a
+module is added or removed from a library. This option has no
+effect on the .LIB file. With this option set to zero you would have to
+select Make Qlb from the pulldown menu (or press Ctrl+Q) to make any
+changes you have made to the library take effect in the .QLB file.
+
+~15,0 - OFF  (Do not Automaticly update QLB)
+~15,1 - ON   (Automaticly update QLB)
+
+~15,Display:               Shortcut Key: NONE
+Allows you to change the default color scheme.
+
+~15,VGA Palette:           Shortcut Key: NONE
+Allows you to set a custom color palette. 
+
+~15,Load Palette:           Shortcut Key: NONE
+Allows you to Load a custom color palette file.
+
+~15,Load Palette:           Shortcut Key: NONE
+Allows you to Save then current display setting to
+a file.
+
+
+
+
+         }
+
+^4,1
+#View
+        {
+
+
+~15,Output Screen:         Shortcut Key: F4
+Displays the DOS screen That was saved at startup or the last time you
+shelled to DOS, Useful for viewing directory listings.
+
+~15,Quick Library:           Shortcut Key: None
+View the contents of a Quick Library (.QLB)
+
+~15,LIBNAME(Num):           Shortcut Key: Shift+Num
+Switch to Library (Num)
+
+         }
+
+
+
+#Link Options
+        {
+
+
+~15,Link Options:
+  I'm not going into detailed descriptions of each option.
+  if you don't know what they do, you probably don't need them.
+
+
+Valid options are:
+~15,  /?                             /ALIGNMENT
+~15,  /BATCH                         /CODEVIEW
+~15,  /CPARMAXALLOC                  /DOSSEG
+~15,  /DSALLOCATE                    /DYNAMIC
+~15,  /EXEPACK                       /FARCALLTRANSLATION
+~15,  /HELP                          /HIGH
+~15,  /INFORMATION                   /LINENUMBERS
+~15,  /MAP                           /NODEFAULTLIBRARYSEARCH
+~15,  /NOEXTDICTIONARY               /NOFARCALLTRANSLATION
+~15,  /NOGROUPASSOCIATION            /NOIGNORECASE
+~15,  /NOLOGO                        /NONULLSDOSSEG
+~15,  /NOPACKCODE                    /NOPACKFUNCTIONS
+~15,  /OLDOVERLAY                    /ONERROR
+~15,  /OVERLAYINTERRUPT              /PACKCODE
+~15,  /PACKDATA                      /PACKFUNCTIONS
+~15,  /PAUSE                         /PCODE
+~15,  /PMTYPE                        /QUICKLIBRARY
+~15,  /r                             /SEGMENTS
+~15,  /STACK                         /TINY
+~15,  /WARNFIXUP          
+
+
+}
+
+
+
+
+
+#Lib Options
+{
+
+~15,Lib Options:
+
+~15, Options:
+
+~15,    /?                  : display LIB options
+~15,    /HELP               : display help on LIB
+~15,    /IGNORECASE         : ignore case on names
+~15,    /NOEXTDICTIONARY    : do not build extended dictionary
+~15,    /NOIGNORECASE       : do not ignore case on names
+~15,    /NOLOGO             : do not display signon banner
+~15,    /PAGESIZE:n         : set library page size to n
+~15, Commands:
+~15,    +name               : add object file
+~15,    -name               : delete object file
+~15,    -+name              : replace object file
+~15,    *name               : copy (extract) object file
+~15,    -*name              : move (delete and extract) object file
+
+}
+
+
+#Adding Modules and Librarys
+
+
+{
+~15,Add Module:         Shortcut Key: Ctrl+A
+
+
+~15,Note: To copy modules from one library to another, Open the library
+~15,      containig the module(s),Use the spacebar to Select the
+~15,      module(s) you wish to copy, then press Ctrl+C, Select the
+~15,      library you wish to add the module(s) to from the view menu
+~15,      and press Shift+Ins.
+
+To add a module to an exsiting library you must first open the library
+you want to add the module to. Select Add Module from the Library
+functions menu or Press Ctrl+A. you are then prompted for a filespec
+the default is *.OBJ *.LIB *.BAS Chose OK. Use the spacebar to select the
+OBJECT (.OBJ) files and or LIBRARYS (.LIB) you wish to add.
+If a .BAS file is selected the file will be compiled then added
+to the library.
+
+~15,TIP: You can enter up to 10 filespecs (ie.) *.OBJ *.LIB etc.
+
+
+~15,Add Library:        Shortcut Key: Ctrl+L
+
+Exacty the same as above except the default filespec is *.LIB
+
+
+~15,Build Module:       Shortcut Key: None  
+
+Compiles source code (.BAS) into a .OBJ file, The .OBJ can then be added
+to a library. BC.EXE must be in the Executable Files path (See options)
+
+
+
+
+
+}
+
+#Creating a new library
+{
+
+~15,Creating a new library:  Shortcut Key: None
+
+  To create a new library, select New Library from the pulldown menu.
+  You are then prompted for a filename, Type in the name you want to
+  give the new library, the name must follow all DOS naming conventions
+  (8.3 format) the extension .LIB is assumed. after giving the new library
+  a name, you will be asked for object modules to add to the new library.
+  Select cancel if you do not wish to add modules at this time, otherwise
+  enter a filespec in the Add Module dialog box and select Ok. You are then
+  given a list of files meeting your filespec, use the space bar to select
+  modules or librarys to add to the new library and select Ok. The new
+  library will be created and displayed for you to edit, a QuickLibray
+  (.QLB) will also be created if you have Auto_Update_QLB set to 1 in the
+  MULTILIB.INI file. (see INI settings)
+
+
+
+ }
+
+#Support Librarys
+
+{
+
+
+~15,Support Librarys:
+
+   Support librarys are the librarys containing the modules needed by BASIC
+   for its internal commands and for initalazation. These librarys only
+   effect the Quicklibrary and not the .LIB file.
+  
+   Diffrent QuickBASIC versions use diffrent support librarys. The
+   names are as follows....
+
+~15,   For QuickBASIC Version 4.0  -   BQLB40.LIB
+
+~15,   For QuickBASIC Version 4.5  -   BQLB45.LIB
+
+~15,   For QuickBASIC Version 7.1  -   QBXQLB.LIB
+
+     You must use the correct support library for the version of
+     QuickBASIC that you are using.In Multilib press F2 to select
+     the version you are using. If you try to load a Quicklibrary
+     in QB (QB /L qlbname)  that was built with a diffrent support
+     library version than the version of QuickBASIC you are using,
+     QB will give the error... 
+
+~15,     Error in loading file (qlbname.QLB ) - Invalid format
+
+    
+
+
+
+
+     }
+
+#Commandline Options
+
+{
+
+
+~15,Commandline Options
+
+    
+
+
+    At this time the only commandline option for Multilib is the
+    library names you wish to open. They can include wildcards and can
+    include more than one filespec (ie.) c:\qb45\*.lib  c:\*.lib etc. etc.
+    no need to put the .LIB ext as it is assumed. or just... MULTILIB *
+    would open the first 9 files found in the current directory.
+
+
+
+
+   }
+

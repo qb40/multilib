@@ -1,0 +1,149 @@
+Current build --  3.00f.25
+
+
+Bug fixes:    06,25,2000
+ changes from Version  2.14e.19 to 3.00f.25
+
+1. Added Quick Library viewer
+
+
+2. Added the Palette Load/Save. You can now Load and
+   Save color schemes.
+
+
+3. Output when debug is turned on is now displayed in
+   a box instead of full screen.
+
+
+4. Rewrote a few more routines in Assembly.
+
+
+3. Several other misc issues
+
+Bug fixes:    05,19,2000
+ changes from Version  2.14e.19 to 2.20e.27
+
+1. Added compile module, you can now add a .bas file to
+   the lib, Multi-Lib will compile it for you and add the
+   .OBJ to the lib.
+
+2. Changed the Help display it now scrolls with the mouse,
+   also added message to bottom of screen to let user know
+   what keys to use to return to the Help Index.
+
+3. Several other misc issues
+
+
+Bug fixes:    05,19,2000
+ changes from Version  2.13e.13 to 2.14e.19
+
+1. Finished search engine.
+
+2. Can't remember what else, I forgot to write it down. :)
+   just a couple of minor things though.
+
+
+
+Bug fixes:    05,08,2000
+ changes from Version 2.11e.07 to  2.12e.08
+
+1. Fixed bug that would not allow user to open 2 .LIBs with the same name
+
+2. Changed tab at top of screen which shows the name of the current .LIB
+   so it now shows the path to the open file.
+
+3. The default directory to extract modules to, is now the same directory
+   that contains the .LIB, that the module is being extracted from.
+    
+
+
+Current build -- 2.11e.07
+
+Bug fixes:    05,05,2000
+ changes from Version 2.10e.05 to 2.11e.07
+
+1. Added Cancel Button to the scroll box
+
+2. Added double click to the scroll box
+
+3. Removed the ability to select multiple directories and drives in
+   the file box.
+
+
+
+Current build -- 2.10e.05
+
+Bug fixes:    05,05,2000
+ changes from Version 2.10d.24  to 2.10e.05
+
+1. When making a QLB, the Qlb would be built in the current directory,
+   instead of the directory that contained the LIB file, unless a path
+   was specified.
+   *****this was not a bug, I just thought it needed to be changed*****
+
+2. Fixed a problem that would not allow user to specify a path when
+   building a QLB.
+
+3. Fixed a couple of minor things in the "Set Paths" module.
+
+
+
+
+Current build -- 2.10d.24
+
+Bug fixes:    04,24,2000
+ changes from Version 1.01b.10  to 2.10d.24
+
+1. Changed INI file structure. You no longer have to edit the .INI file
+   to change Options.
+
+2. Added the ability to set paths from within program.
+
+3. Added Display settings module.
+
+4. Added Pallete module
+
+
+Bug fixes:    03,14,2000
+ changes from Version 1.01b.10  to 1.01c.14
+
+1. Fixed problem linking with link.exe version 5.10
+   that would cause multilib to seem to hang while bulding
+   or updating a quiklibrary, version 5.10 expects a .DEF
+   file spec in the response file, this did not happen with
+   any other version of link to my knowledge.
+
+
+Bug fixes:    02,10,2000
+ changes from Version 1.00a.06 to 1.01b.10
+
+1. Fixed a problem with scrollbox adjusting to module names that
+   were longer than 15 characters long.
+
+2. Added Directory info to display.
+
+3. Removed the about screen at startup
+
+4. Keep checking the web page, soon multilib will have many more
+   enhancements!!
+
+
+Bug fixes:    01,06,2000
+ changes from Version 1.00a.04 to 1.01a.06
+
+1. When extracting modules, extracted modules would always
+   be placed in the TEMP directory, even if different directory
+   was specified.
+
+
+
+Bug fixes:    01,04,2000
+ changes from Version 1.00a.02 to 1.01a.04
+
+  1. Pressing the f-keys (F1,F2) etc. etc. would activate menus that
+     should have been turned off while in other menus.  
+     
+  2.  Couldn't find help file if multilib was run from a directory other
+      than the directory containig multilib.exe
+
+  3. Error if invalid characters in filename passed on command line.
